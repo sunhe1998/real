@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>심리테스트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/parse@2.1.0/dist/parse.js"></script>
+
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel_val)
+{
+
+    case 1: result='선택한 동물은 당신이 힘들 때 가장 먼저 포기하게 되는 것 : 직업'; break;
+    case 2: result='선택한 동물은 당신이 힘들 때 가장 먼저 포기하게 되는 것 : 가족'; break;
+    case 3: result='선택한 동물은 당신이 힘들 때 가장 먼저 포기하게 되는 것 : 자존심'; break;
+    case 4: result='선택한 동물은 당신이 힘들 때 가장 먼저 포기하게 되는 것 : 사랑'; break;
+    case 5: result='선택한 동물은 당신이 힘들 때 가장 먼저 포기하게 되는 것 : 친구'; break;
+    default : result='선택하세용'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result);
+})
+
+})
+  
+
+</script>
+
+<P>@TEST3@</P>
+<p>먼길을 떠나던 당신이 한마리의 동물을 버려야 한다면 어떤동물을 버릴 것 인가요??</p>
+
+<b>선택 : </b>
+<select id='sel'>
+<option value=0 selected>-리스트-</option>
+<option value=1>소</option>
+<option value=2>말</option>
+<option value=3>사자 </option>
+<option value=4>양</option>
+<option value=5>원숭이</option>
+</select>
+
+
+
+
+<p class='result'>결과가 표시되는 곳입니다.</p>
+
+
+
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel1').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel1_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel1_val)
+{
+
+    case 6: result2=window.location="simri1.html"; break;
+    case 7: result2=window.location="simri2.html"; break;
+    case 8: result2=window.location="simri4.html"; break;
+    case 9: result2=window.location="simri5.html"; break;
+    default : result2='선택해 주세요!'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result2);
+})
+
+})
+</script>
+
+<p>@다른 심리테스트 더 하기@</p>
+
+<b>선택 : </b>
+<select id='sel1'>
+<option value=5 selected>-리스트-</option>
+<option value=6>TEST1</option>
+<option value=7>TEST2</option>
+<option value=8>TEST4</option>
+<option value=9>TEST5</option>
+</select>
+
+
+
+</head>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>심리테스트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/parse@2.1.0/dist/parse.js"></script>
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel_val)
+{
+
+    case 1: result='꼼꼼하고 착실한 타입 : 완고하고 융통성 부족으로 인간괸계가 서툴다!'; break;
+    case 2: result='자상한 형, 누나 타입 : 현실적이지만 의외로 겁이 많은 편.'; break;
+    case 3: result='감성적이나 승부욕이 강한 타입 : 의외로 감성적이고 의리나 인정에 약한 당신!'; break;
+    case 4: result='낙천적인 마이페이스 타입 : 강한 인상의 개성파인 당신~ 언제나 본능에 충실한 편!'; break;
+    default : result='선택해 주세요!'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result);
+})
+
+})
+</script>
+
+<p>@TEST2@</p>
+<p>1.자연스럽게 깍지를 꼈을 때, 어떤 손의 엄지손가락이 밑에 있는가?</p>
+<p>2.팔짱을 꼈을 때, 어느 쪽 팔이 밑에 위치하는가?</p>
+
+<b>선택 : </b>
+<select id='sel'>
+<option value=0 selected>-리스트-</option>
+<option value=1>좌좌뇌형(왼왼)</option>
+<option value=2>좌우뇌형(왼오)</option>
+<option value=3>우좌뇌형(오왼)</option>
+<option value=4>우우뇌형(오오)</option>
+</select>
+
+
+
+<p class='result'>결과가 표시되는 곳입니다.</p>
+
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel1').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel1_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel1_val)
+{
+
+    case 6: result2=window.location="simri1.html"; break;
+    case 7: result2=window.location="simri3.html"; break;
+    case 8: result2=window.location="simri4.html"; break;
+    case 9: result2=window.location="simri5.html"; break;
+    default : result2='선택해 주세요!'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result2);
+})
+
+})
+</script>
+
+<p>@다른 심리테스트 더 하기@</p>
+
+<b>선택 : </b>
+<select id='sel1'>
+<option value=5 selected>-리스트-</option>
+<option value=6>TEST1</option>
+<option value=7>TEST3</option>
+<option value=8>TEST4</option>
+<option value=9>TEST5</option>
+</select>
+
+
+
+</head>
+</html>

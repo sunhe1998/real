@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>심리테스트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/parse@2.1.0/dist/parse.js"></script>
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel_val)
+{
+
+    case 1: result='애인 한 명으로는 만족을 못하는 타입!연애를 늘 열정적으로 하고 싶고, 그 열정이 식으면나중에 후회하지 말고 있을 때 잘하자구요~'; break;
+    case 2: result='이성에게 인기가 많고 친절한 타입!애인에게 집착하지 않고,연애가 끝나도 새로운 연애를 금방 시작할 수 있는 능력자!'; break;
+    case 3: result='좋아하는 이성을 독차지해야하는 타입!애인에게 최선을 다하는 헌신적인 사랑을 하네요자칫 무서운 집착으로 변할 수 있으니 조심!'; break;
+    case 4: result='한마디로 어린아이 같은 타입!상대가 내 생각을 1초라도 하지 않으면 안되고 조금이라도 불만이 쌓이면 잠수를 타거나 연락을 끊어버려 상대를 당혹스럽게 하네요! 불만이 있다면 솔직하게 말로 표현해보세요~'; break;
+    default : result='잘못된 선택입니다.'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result);
+})
+
+})
+</script>
+
+<P>@TEST4@</P>
+<p>데이트 약속 시간보다 조금 일찍 도착한 당신!</p>
+<P>우연히 옛 애인을 마주치게 되는데, 이때 당신의 행동은?</P>
+
+
+<b>선택 : </b>
+<select id='sel'>
+<option value=0 selected>-리스트-</option>
+<option value=1>친구처럼 안부인사를 나눈다.</option>
+<option value=2>애인을 기다리고 있다고 솔직하게 말한다.</option>
+<option value=3>누구를 만나러 왔다며 대충 둘러대고 자리를 피한다.</option>
+<option value=4>외면하고 모른척 한다.</option>
+
+</select>
+
+<p class='result'>결과가 표시되는 곳입니다.</p>
+
+
+
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel1').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel1_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel1_val)
+{
+
+    case 6: result2=window.location="simri1.html"; break;
+    case 7: result2=window.location="simri2.html"; break;
+    case 8: result2=window.location="simri3.html"; break;
+    case 9: result2=window.location="simri5.html"; break;
+    default : result2='선택해 주세요!'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result2);
+})
+
+})
+</script>
+
+<p>@다른 심리테스트 더 하기@</p>
+
+<b>선택 : </b>
+<select id='sel1'>
+<option value=5 selected>-리스트-</option>
+<option value=6>TEST1</option>
+<option value=7>TEST2</option>
+<option value=8>TEST3</option>
+<option value=9>TEST5</option>
+</select>
+
+</head>
+</html>

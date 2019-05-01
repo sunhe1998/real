@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>심리테스트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/parse@2.1.0/dist/parse.js"></script>
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel_val)
+{
+
+    case 1: result='겉으로는 활발해보이나, 솔직해지기 힘들어하는 타입...'; break;
+    case 2: result='적극적이고 순수한 모습을 가지고 있고 대인관계가 좋은 편이다!'; break;
+    case 3: result='빨간풍선을 건넨 사람과는 다르게 매우 솔직한 타입, 다른 사람에게 이용당할 가능성 매우 높음!!'; break;
+    case 4: result='자신의 마음에게 조차도 솔직할 수 없는 타입,, 자신을 위해 솔직해지는 연습이 필요,,!'; break;
+    default : result='선택해 주세요!'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result);
+})
+
+})
+</script>
+
+<p>@TEST1@</p>
+<p>마음에 드는 이성을 공원에서 만났습니다.</p>
+<p>그 사람에게 풍선을 전해주고 싶은 당신! 어떤 색 풍선을 건네줄건가요?</p>
+
+<b>선택 : </b>
+<select id='sel'>
+<option value=0 selected>-리스트-</option>
+<option value=1>빨강</option>
+<option value=2>파랑</option>
+<option value=3>노랑</option>
+<option value=4>흰색</option>
+</select>
+
+
+
+<p class='result'>결과가 표시되는 곳입니다.</p>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+/* 리스트 중 하나를 선택했을 시 */
+$('#sel1').change(function(){
+/* 선택된 값을 저장 (숫자로 형변환을 해준다) */
+var sel1_val=Number($(this).val());
+/* 선택값에 따라 작동 */
+switch(sel1_val)
+{
+
+    case 6: result2=window.location="simri2.html"; break;
+    case 7: result2=window.location="simri3.html"; break;
+    case 8: result2=window.location="simri4.html"; break;
+    case 9: result2=window.location="simri5.html"; break;
+    default : result2='선택해 주세요!'; break;
+}
+    /* 결과값을 텍스트로 표시*/
+$('.result').text(result2);
+})
+
+})
+</script>
+
+<p>@다른 심리테스트 더 하기@</p>
+
+<b>선택 : </b>
+<select id='sel1'>
+<option value=5 selected>-리스트-</option>
+<option value=6>TEST2</option>
+<option value=7>TEST3</option>
+<option value=8>TEST4</option>
+<option value=9>TEST5</option>
+</select>
+
+
+
+</head>
+</html>
